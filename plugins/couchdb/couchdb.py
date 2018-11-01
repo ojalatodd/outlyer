@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-# $ sudo -H pip install kubernetes
-# --> Ran into issue """Cannot uninstall 'PyYAML'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.""""
-# ----> Installed older version of pip as a workaround: ```$ sudo -H pip3 install pip==8.1.1```
-# --> Also had to install packages `python3-dev build-essential autoconf libtool pkg-config libssl-dev` for source that pyopenssl can be compiled against and the appropriate build tools.
 
 from kubernetes import client, config
 from kubernetes.client import Configuration
