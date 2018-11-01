@@ -74,7 +74,6 @@ The CouchDB_K8s plugin can be customized via environment variables.
 |password        |password             |CouchDB admin password.                               |
 |sharded_port    |5984                 |Port to access sharded data.                          |
 |local_port      |5986                 |Port to access local nodes.                           |
-|password        |                     |Basic authentication password.                        |
 
 
 == Changelog ==
