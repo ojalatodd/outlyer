@@ -2,7 +2,7 @@
 title: Apache CouchDB database running on Kubernetes
 description: Outlyer Monitoring Integration for the Apache CouchDB server running on Kubernetes.
 icon:
-  url: 
+  url: https://raw.githubusercontent.com/ojalatodd/outlyer/master/integrations/couchdb_k8s/resources/couch%402x.svg?sanitize=true
 version: 1.0.0
 author: 
   name: Todd Ojala
