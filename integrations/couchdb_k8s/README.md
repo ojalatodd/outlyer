@@ -1,4 +1,4 @@
-CouchdDB on K8s Integration
+CouchDB on K8s Integration
 ===========================
 
 == Description ==
