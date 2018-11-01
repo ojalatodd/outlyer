@@ -1,0 +1,12 @@
+---
+title: Apache CouchDB database running on Kubernetes
+description: Outlyer Monitoring Integration for the Apache CouchDB server running on Kubernetes.
+icon:
+  url: 
+version: 1.0.0
+author: 
+  name: Todd Ojala
+  url: https://github.com/ojalatodd
+license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License
+labels:
+  data-store: elasticsearch
