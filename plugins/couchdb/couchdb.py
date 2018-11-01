@@ -32,10 +32,10 @@ Configuration.set_default(c)
 
 METRICS = [
     'couchdb.database_writes.value',
-    'douchdb.database_reads.value',
+    'couchdb.database_reads.value',
     'couchdb.open_databases.value',
     'couchdb.open_os_files.value',
-    'douchdb.request_time.value',
+    'couchdb.request_time.value',
     'couchdb.httpd.bulk_requests.value',
     'couchdb.httpd.requests.value',
     'couchdb.httpd.temporary_view_reads.value',
