@@ -1,0 +1,352 @@
+description: Display most important metrics for couchdb.
+icon:
+  color: '#000000'
+  name: dashboard
+labels: []
+name: couchdb-k8s
+scopes: []
+theme: light
+title: couchdb_k8s
+widgets:
+  chartWidgets:
+  - col: 0
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: Requests per second by method.
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,couchdb.httpd_request_methods.get.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_request_methods.copy.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_request_methods.delete.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_request_methods.head.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_request_methods.post.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_request_methods.put.value,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb httpd requests by method
+    row: 0
+    width: 4
+  - col: 0
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: 'http requests by category. '
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,couchdb.httpd.bulk_requests.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd.requests.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd.temporary_view_reads.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd.temporary_view_reads.value,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb http requests by type
+    row: 2
+    width: 4
+  - col: 4
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: Database reads/writes
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,couchdb.database_reads.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.database_writes.value,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb database reads & writes
+    row: 0
+    width: 4
+  - col: 4
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: ""
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,couchdb.httpd_status_codes.200.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.201.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.202.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.204.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.206.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.301.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.302.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.304.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.400.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.401.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.403.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.405.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.500.value,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,couchdb.httpd_status_codes.501.value,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb httpd status codes
+    row: 2
+    width: 4
+  - col: 0
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: Total number of open databases.
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,couchdb.open_databases.value,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb Open Databases
+    row: 4
+    width: 4
+  - col: 4
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: 'Total number of open files. '
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,couchdb.open_os_files.value,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb Open Files
+    row: 4
+    width: 4
+  - col: 0
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: Size of data and disk space taken by couchdb.
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,data_size,:eq,:avg
+        scoped: true
+        visible: true
+      - query: name,disk_size,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb  disk & data size
+    row: 6
+    width: 3
+  - col: 3
+    height: 2
+    options:
+      axes:
+        xAxis:
+          mode: Time
+          showGridLines: true
+        yAxis:
+          min: 0
+          showGridLines: true
+          title: ""
+          unit: auto
+          unitPosition: After
+      chartType: Line
+      description: Total document count.
+      externalLink:
+        linkType: dashboard
+        path: ""
+      queries:
+      - query: name,doc_count,:eq,:avg
+        scoped: true
+        visible: true
+      seriesStyle:
+        color: '#588fd8'
+        palette: MultiColor
+      summarization: Avg
+      thresholds:
+      - display: None
+        lineStyle: Solid
+        status: Error
+        threshold: 0
+      title: Couchdb total doc count
+    row: 6
+    width: 3
