@@ -61,7 +61,7 @@ Once enabled you will get a default CouchDB dashboard to help you get started mo
 
 == Installation ==
 
-Run the CouchDB_K8s plugin against your Kubernetes master master and it will start collecting the metrics.
+Run the CouchDB_K8s plugin against your Kubernetes master and it will start collecting the metrics.
 
 
 ### Plugin Environment Variables
